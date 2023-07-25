@@ -1,0 +1,29 @@
+{
+  "name": "user/discord-music-bot-2",
+  "timeout": 10000,
+  "connector": false,
+  "events": {
+    "functions/events/discord/bot/playback/finished.js": {
+      "name": "discord.bot.playback.finished"
+    },
+    "functions/events/discord/message/player-controls.js": {
+      "name": "discord.message.create"
+    },
+    "functions/events/discord/message/queue-controls.js": {
+      "name": "discord.message.create"
+    },
+    "functions/events/autocode/self/deployed.js": {
+      "name": "autocode.self.deployed"
+    }
+  },
+  "env": [
+    {
+      "name": "PREFIX",
+      "description": "Your bot's prefix"
+    },
+    {
+      "name": "RADIO_VOICE_CHANNEL",
+      "description": "Id of the voice channel in your server where the bot should play music"
+    }
+  ]
+}
